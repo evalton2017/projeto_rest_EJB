@@ -28,7 +28,7 @@ public class UsuarioTest {
 		fail("Not yet implemented");
 	}
 	
-	@Ignore
+	@Test
 	public void inserir() {
 		
 		
@@ -50,7 +50,7 @@ public class UsuarioTest {
 		
 	}
 	
-	@Test
+	@Ignore
 	public void listarChamado() {
 		cdao.excluir(4L);
 		System.out.println("Excluiu");

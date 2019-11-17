@@ -1,13 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>br.com.projeto</groupId>
-  <artifactId>rest_estudo</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  <packaging>jar</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.projeto</groupId>
+	<artifactId>rest_estudo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 
-  <name>br.com.projeto</name>
-  <url>http://maven.apache.org</url>
+	<packaging>jar</packaging>
+
+	<name>br.com.projeto</name>
+	<url>http://maven.apache.org</url>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -52,7 +54,7 @@
 			<version>1.1</version>
 			<scope>provided</scope>
 		</dependency>
-				
+
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -67,23 +69,17 @@
 			<version>5.4.4.Final</version>
 		</dependency>
 
-		
-		<!-- Conexao 
+
+		<!-- Conexao <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> 
+			<version>8.0.11</version> </dependency> -->
+
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.11</version>
-		</dependency>		
-		 		
- -->
-		
-		<dependency>
-	        <groupId>org.postgresql</groupId>
-	        <artifactId>postgresql</artifactId>
-	        <version>42.2.0</version>
-	        <scope>runtime</scope>
- 		</dependency>
- 
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.0</version>
+			<scope>runtime</scope>
+		</dependency>
+
 		<!-- Testes -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -111,6 +107,44 @@
 			<version>2.18.3</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Segurança e autenticação -->
+
+		<!-- https://mvnrepository.com/artifact/org.wildfly/wildfly-security-api -->
+		<dependency>
+			<groupId>org.wildfly</groupId>
+			<artifactId>wildfly-security-api</artifactId>
+			<version>12.0.0.Final</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.wildfly/wildfly-core-security-api -->
+		<dependency>
+			<groupId>org.wildfly</groupId>
+			<artifactId>wildfly-core-security-api</artifactId>
+			<version>8.2.0.Final</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.keycloak/keycloak-core -->
+		<dependency>
+			<groupId>org.keycloak</groupId>
+			<artifactId>keycloak-core</artifactId>
+			<version>6.0.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.keycloak/keycloak-adapter-spi -->
+		<dependency>
+			<groupId>org.keycloak</groupId>
+			<artifactId>keycloak-adapter-spi</artifactId>
+			<version>6.0.1</version>
+		</dependency>
+
+		<!-- TODO: Remove -->
+		<dependency>
+			<groupId>org.wildfly</groupId>
+			<artifactId>wildfly-security</artifactId>
+			<version>10.0.0.Final</version>
+		</dependency>
+
 
 
 		<!-- For Jersey 2.x -->
@@ -153,8 +187,8 @@
 			<artifactId>weld-servlet</artifactId>
 			<version>2.4.8.Final</version>
 		</dependency>
-		
-		
+
+
 		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 		<dependency>
 			<groupId>commons-codec</groupId>

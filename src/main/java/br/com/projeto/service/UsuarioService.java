@@ -1,6 +1,8 @@
 package br.com.projeto.service;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 
@@ -46,6 +48,14 @@ public class UsuarioService {
 	public Usuario selecionar(long id) {
 		Usuario user = dao.selecionar(id);		
 		return  user;
+	}
+	
+	public List<Usuario> listart(){	
+		List<Usuario> users = new ArrayList<>();
+		users = dao.listar();
+		
+		return users;
+		
 	}
 	
 }

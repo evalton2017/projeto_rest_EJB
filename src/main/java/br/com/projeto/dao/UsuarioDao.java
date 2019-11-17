@@ -1,5 +1,6 @@
 package br.com.projeto.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -33,6 +34,14 @@ public class UsuarioDao {
 				user = usuario.get(0);
 			}
 			return user;
+	}
+	
+	public List<Usuario> listar(){
+		List<Usuario> usuarios = new ArrayList<>();
+		Query query =entityManager.createQuery("from Usuario order by nome");
+		
+		usuarios= (List<Usuario>) query.getResultList();
+		return usuarios;
 	}
 	
 	
