@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.inject.Inject;
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 
 import org.apache.commons.codec.digest.DigestUtils;
@@ -14,12 +16,15 @@ import br.com.projeto.model.Usuario;
 import br.com.projeto.util.HibernateUtil;
 
 
+@Named
 public class UsuarioService {
 
-	EntityManager entityManager = HibernateUtil.getEntityManager();
+	@Inject
+	private EntityManager entityManager;
+
 
 	private static UsuarioDao dao = new UsuarioDao();
-	
+		
 	public static Usuario selecionarAluno() {
 		Usuario aluno = dao.login("aluno");
 		

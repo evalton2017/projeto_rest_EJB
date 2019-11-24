@@ -1,9 +1,0 @@
-{
-  "realm": "ejb-demo",
-  "auth-server-url": "http://localhost:8080/auth",
-  "ssl-required": "external",
-  "resource": "remote-ejb",
-  "public-client": true
-}
-
-

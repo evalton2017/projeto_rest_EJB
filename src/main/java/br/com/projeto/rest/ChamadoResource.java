@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.inject.Inject;
+import javax.inject.Named;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -20,7 +22,7 @@ import br.com.projeto.enums.chamado.Status;
 import br.com.projeto.model.Chamado;
 import br.com.projeto.service.ChamadoService;
 
-
+@Named
 @Path("chamados")
 public class ChamadoResource {
 	

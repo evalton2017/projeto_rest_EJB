@@ -3,6 +3,8 @@ package br.com.projeto.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
@@ -11,9 +13,11 @@ import br.com.projeto.model.Usuario;
 import br.com.projeto.util.HibernateUtil;
 
 
+@Named
 public class UsuarioDao {
 
 	EntityManager entityManager = HibernateUtil.getEntityManager();
+
 	
 	public List<Usuario> findAll() {
 		return entityManager.createQuery("from Usuario u ORDER BY u.id", Usuario.class).getResultList();

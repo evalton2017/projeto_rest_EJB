@@ -1,8 +1,10 @@
 package br.com.projeto.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
-
+import javax.inject.Inject;
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
@@ -12,18 +14,19 @@ import br.com.projeto.model.Chamado;
 import br.com.projeto.service.UsuarioService;
 import br.com.projeto.util.HibernateUtil;
 
-
-
+@Named
 public class ChamadoDao {
-	
+			
 	EntityManager entityManager = HibernateUtil.getEntityManager();
-
-	private UsuarioService usuarioservice = new UsuarioService();
+	
+	@Inject
+	private UsuarioService usuarioservice;
 
 
 	public List<Chamado> listar() {
-		return entityManager.createQuery("FROM Chamado c ORDER BY c.id", Chamado.class).getResultList();
-
+		List<Chamado> chamados = new ArrayList<Chamado>();
+		chamados =  entityManager.createQuery("FROM Chamado c ORDER BY c.id", Chamado.class).getResultList();
+		return chamados;
 	}
 	
 	

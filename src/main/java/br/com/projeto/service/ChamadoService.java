@@ -3,18 +3,20 @@ package br.com.projeto.service;
 import java.util.Date;
 import java.util.List;
 
+import javax.inject.Inject;
+import javax.inject.Named;
 
 import br.com.projeto.dao.ChamadoDao;
 import br.com.projeto.enums.chamado.Status;
 import br.com.projeto.enums.chamado.Tipo;
 import br.com.projeto.model.Chamado;
 
-
+@Named
 public class ChamadoService {
 	
+	@Inject
+	private UsuarioService userService;
 
-	private UsuarioService userService = new UsuarioService();
-	 
 	private ChamadoDao chamadoDao = new ChamadoDao();
 	
 	public Long inserir(Chamado chamado) {

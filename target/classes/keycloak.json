@@ -1,0 +1,10 @@
+{
+  "realm": "quarkus",
+  "auth-server-url": "http://localhost:8180/auth",
+  "ssl-required": "external",
+  "resource": "projeto_rest",
+  "credentials": {
+    "secret": "ad4c4e06-71ee-4e6f-b775-089f3e982ba0"
+  },
+  "confidential-port": 0
+}
